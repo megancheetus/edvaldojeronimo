@@ -2,6 +2,7 @@ import { MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import fotoProfissional from "@/assets/foto-profissional.jpg";
+import logo from "@/assets/logo.png";
 
 const HeroSection = () => {
   return (
@@ -15,9 +16,7 @@ const HeroSection = () => {
             transition={{ duration: 0.7 }}
             className="order-2 md:order-1"
           >
-            <div className="h-14 w-40 rounded bg-muted border border-border flex items-center justify-center mb-6">
-              <span className="text-xs text-muted-foreground">Logo</span>
-            </div>
+            <img src={logo} alt="Logo Edvaldo Jerônimo" className="h-16 w-auto mb-6" />
             <span className="inline-block text-accent font-semibold text-sm tracking-wider uppercase mb-4">
               Cuidado integral e contínuo
             </span>
