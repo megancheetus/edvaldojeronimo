@@ -14,8 +14,8 @@ const HeroSection = () => {
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7 }}
-            className="order-2 md:order-1"
-          >
+            className="order-2 md:order-1">
+            
             <img src={logo} alt="Logo Edvaldo Jerônimo" className="h-44 md:h-52 w-auto mb-6" />
             <span className="inline-block text-accent font-semibold text-sm tracking-wider uppercase mb-4">
               Cuidado integral e contínuo
@@ -29,13 +29,13 @@ const HeroSection = () => {
             <Button
               asChild
               size="lg"
-              className="bg-primary text-primary-foreground hover:bg-primary/90 gap-2 text-base px-8 py-6 rounded-lg shadow-md hover:shadow-lg transition-all"
-            >
+              className="bg-primary text-primary-foreground hover:bg-primary/90 gap-2 text-base px-8 py-6 rounded-lg shadow-md hover:shadow-lg transition-all">
+              
               <a
                 href="https://wa.me/5581992871707"
                 target="_blank"
-                rel="noopener noreferrer"
-              >
+                rel="noopener noreferrer">
+                
                 <MessageCircle size={20} />
                 Agendar Atendimento
               </a>
@@ -47,20 +47,20 @@ const HeroSection = () => {
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.7, delay: 0.2 }}
-            className="order-1 md:order-2 flex justify-center"
-          >
+            className="order-1 md:order-2 flex justify-center">
+            
             <div className="w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-2xl bg-secondary flex items-center justify-center border border-border overflow-hidden">
               <img
-                src={fotoProfissional}
+
                 alt="Dr. Edvaldo Jerônimo da Silva Júnior"
-                className="w-full h-full object-cover object-top"
-              />
+                className="w-full h-full object-cover object-top" src="/lovable-uploads/3f4c0b0a-340e-416e-90fe-0c8f5ebd544c.png" />
+              
             </div>
           </motion.div>
         </div>
       </div>
-    </section>
-  );
+    </section>);
+
 };
 
 export default HeroSection;
