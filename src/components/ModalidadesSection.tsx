@@ -3,25 +3,25 @@ import { motion } from "framer-motion";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 
 const planos = [
-  {
-    icon: Stethoscope,
-    title: "Consulta Avulsa",
-    description:
-      "Focada em uma queixa específica ou pontual. Ideal para resoluções imediatas e avaliações iniciais de saúde, renovação de receituário, solicitação de exames.",
-  },
-  {
-    icon: CalendarCheck,
-    title: "Consulta com Direito a Retorno",
-    description:
-      "Indicada quando há necessidade de solicitação de exames complementares. Inclui uma segunda sessão para análise de resultados e definição da conduta terapêutica dentro do prazo acordado de no máximo 30 dias.",
-  },
-  {
-    icon: Layers,
-    title: "Pacotes de Acompanhamento",
-    description:
-      "O modelo ideal para a Medicina de Família. Planejado para quem busca continuidade no cuidado, controle de condições crônicas ou check-ups preventivos ao longo do ano (hipertensos, diabéticos, saúde mental, entre outros).",
-  },
-];
+{
+  icon: Stethoscope,
+  title: "Consulta Avulsa",
+  description:
+  "Focada em uma queixa específica ou pontual. Ideal para resoluções imediatas e avaliações iniciais de saúde, renovação de receituário, solicitação de exames."
+},
+{
+  icon: CalendarCheck,
+  title: "Consulta com Direito a Retorno",
+  description:
+  "Indicada quando há necessidade de solicitação de exames complementares. Inclui uma segunda sessão para análise de resultados e definição da conduta terapêutica dentro do prazo acordado de no máximo 30 dias."
+},
+{
+  icon: Layers,
+  title: "Pacotes de Acompanhamento",
+  description:
+  "O modelo ideal para a Medicina de Família. Planejado para quem busca continuidade no cuidado, controle de condições crônicas ou check-ups preventivos ao longo do ano (hipertensos, diabéticos, saúde mental, entre outros)."
+}];
+
 
 const ModalidadesSection = () => {
   return (
@@ -33,8 +33,8 @@ const ModalidadesSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-80px" }}
           transition={{ duration: 0.5 }}
-          className="text-center mb-14"
-        >
+          className="text-center mb-14">
+          
           <h2 className="text-3xl md:text-4xl font-bold text-primary mb-3">
             Como funcionam os atendimentos
           </h2>
@@ -49,8 +49,8 @@ const ModalidadesSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-60px" }}
           transition={{ duration: 0.5, delay: 0.1 }}
-          className="max-w-2xl mx-auto mb-16"
-        >
+          className="max-w-2xl mx-auto mb-16">
+          
           <Tabs defaultValue="presencial" className="w-full">
             <TabsList className="grid w-full grid-cols-2">
               <TabsTrigger value="presencial" className="gap-2">
@@ -71,8 +71,8 @@ const ModalidadesSection = () => {
                     <h3 className="text-lg font-semibold text-foreground mb-1">
                       Atendimento Presencial
                     </h3>
-                    <p className="text-muted-foreground text-sm leading-relaxed">
-                      Atendimento no consultório com foco em exame físico detalhado e proximidade.
+                    <p className="text-muted-foreground text-sm leading-relaxed">Uma consulta com o tempo que você merece. Avaliação clínica completa em um ambiente acolhedor, ideal para quem busca uma escuta atenta, exame físico minucioso e a construção de um plano de cuidado que respeite o seu contexto de vida.
+
                     </p>
                   </div>
                 </div>
@@ -105,21 +105,21 @@ const ModalidadesSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-60px" }}
           transition={{ duration: 0.5 }}
-          className="text-xl md:text-2xl font-semibold text-foreground text-center mb-8"
-        >
+          className="text-xl md:text-2xl font-semibold text-foreground text-center mb-8">
+          
           Tipos de Plano de Cuidado
         </motion.h3>
 
         <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
-          {planos.map((plano, i) => (
-            <motion.div
-              key={plano.title}
-              initial={{ opacity: 0, y: 24 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-60px" }}
-              transition={{ duration: 0.5, delay: i * 0.12 }}
-              className="rounded-xl border border-border bg-card p-7 shadow-sm hover:shadow-md transition-shadow"
-            >
+          {planos.map((plano, i) =>
+          <motion.div
+            key={plano.title}
+            initial={{ opacity: 0, y: 24 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-60px" }}
+            transition={{ duration: 0.5, delay: i * 0.12 }}
+            className="rounded-xl border border-border bg-card p-7 shadow-sm hover:shadow-md transition-shadow">
+            
               <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-5">
                 <plano.icon size={24} className="text-primary" />
               </div>
@@ -130,11 +130,11 @@ const ModalidadesSection = () => {
                 {plano.description}
               </p>
             </motion.div>
-          ))}
+          )}
         </div>
       </div>
-    </section>
-  );
+    </section>);
+
 };
 
 export default ModalidadesSection;
