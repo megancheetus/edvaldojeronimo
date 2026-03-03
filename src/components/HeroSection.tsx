@@ -1,6 +1,7 @@
-import { MessageCircle, User } from "lucide-react";
+import { MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
+import fotoProfissional from "@/assets/foto-profissional.jpg";
 
 const HeroSection = () => {
   return (
@@ -47,7 +48,11 @@ const HeroSection = () => {
             className="order-1 md:order-2 flex justify-center"
           >
             <div className="w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-2xl bg-secondary flex items-center justify-center border border-border overflow-hidden">
-              <User size={80} className="text-muted-foreground/40" />
+              <img
+                src={fotoProfissional}
+                alt="Dr. Edvaldo Jerônimo da Silva Júnior"
+                className="w-full h-full object-cover object-top"
+              />
             </div>
           </motion.div>
         </div>
