@@ -7,19 +7,19 @@ const planos = [
     icon: Stethoscope,
     title: "Consulta Avulsa",
     description:
-      "Focada em uma queixa específica e pontual. Ideal para resoluções imediatas e avaliações iniciais de saúde.",
+      "Focada em uma queixa específica ou pontual. Ideal para resoluções imediatas e avaliações iniciais de saúde, renovação de receituário, solicitação de exames.",
   },
   {
     icon: CalendarCheck,
     title: "Consulta com Direito a Retorno",
     description:
-      "Indicada quando há necessidade de solicitação de exames complementares. Inclui uma segunda sessão para análise de resultados e definição da conduta terapêutica dentro do prazo acordado.",
+      "Indicada quando há necessidade de solicitação de exames complementares. Inclui uma segunda sessão para análise de resultados e definição da conduta terapêutica dentro do prazo acordado de no máximo 30 dias.",
   },
   {
     icon: Layers,
     title: "Pacotes de Acompanhamento",
     description:
-      "O modelo ideal para a Medicina de Família. Planejado para quem busca continuidade no cuidado, controle de condições crônicas ou check-ups preventivos ao longo do ano.",
+      "O modelo ideal para a Medicina de Família. Planejado para quem busca continuidade no cuidado, controle de condições crônicas ou check-ups preventivos ao longo do ano (hipertensos, diabéticos, saúde mental, entre outros).",
   },
 ];
 
