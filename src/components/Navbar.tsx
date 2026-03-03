@@ -26,8 +26,10 @@ const Navbar = () => {
       }`}
     >
       <div className="container mx-auto flex items-center justify-between px-6 py-4">
-        <a href="#" className="text-lg font-bold text-primary tracking-tight">
-          Edvaldo Jerônimo
+        <a href="#" className="flex items-center">
+          <div className="h-10 w-28 rounded bg-muted border border-border flex items-center justify-center">
+            <span className="text-xs text-muted-foreground">Logo</span>
+          </div>
         </a>
 
         {/* Desktop */}
