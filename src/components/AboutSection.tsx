@@ -9,8 +9,8 @@ const AboutSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-80px" }}
           transition={{ duration: 0.6 }}
-          className="max-w-3xl mx-auto"
-        >
+          className="max-w-3xl mx-auto">
+          
           <h2 className="text-3xl md:text-4xl font-bold text-primary mb-8">
             Sobre o meu trabalho
           </h2>
@@ -20,8 +20,8 @@ const AboutSection = () => {
               pontual. Minha prática é guiada pela <strong className="text-foreground">visão sistêmica</strong>, 
               considerando o contexto familiar, social e emocional de cada indivíduo.
             </p>
-            <p>
-              Como médico de família, atuo na <strong className="text-foreground">Atenção Primária à Saúde (APS)</strong>, 
+            <p>Como médico de família, atuo tanto na Atenção Primária à Saúde (APS), porta de entrada do cuidado no SUS, como também em ambiente particular no consultório e através da Teleconsulta. Acompanho pessoas ao longo de toda a vida, promovendo prevenção, diagnóstico precoce e tratamento contínuo.
+              <strong className="text-foreground">Atenção Primária à Saúde (APS)</strong>, 
               porta de entrada do cuidado no SUS. Acompanho pessoas ao longo de toda a vida, 
               promovendo prevenção, diagnóstico precoce e tratamento contínuo.
             </p>
@@ -33,8 +33,8 @@ const AboutSection = () => {
           </div>
         </motion.div>
       </div>
-    </section>
-  );
+    </section>);
+
 };
 
 export default AboutSection;
