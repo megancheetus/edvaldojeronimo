@@ -1,0 +1,59 @@
+import { MessageCircle, User } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { motion } from "framer-motion";
+
+const HeroSection = () => {
+  return (
+    <section className="min-h-screen flex items-center pt-20 pb-16 md:pb-24">
+      <div className="container mx-auto px-6">
+        <div className="grid md:grid-cols-2 gap-12 md:gap-16 items-center">
+          {/* Text */}
+          <motion.div
+            initial={{ opacity: 0, y: 24 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7 }}
+            className="order-2 md:order-1"
+          >
+            <span className="inline-block text-accent font-semibold text-sm tracking-wider uppercase mb-4">
+              Cuidado integral e contínuo
+            </span>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-primary leading-tight mb-6">
+              Médico de Família<br />e Comunidade.
+            </h1>
+            <p className="text-lg text-muted-foreground mb-8 max-w-md">
+              Foco na pessoa e promoção da saúde.
+            </p>
+            <Button
+              asChild
+              size="lg"
+              className="bg-primary text-primary-foreground hover:bg-primary/90 gap-2 text-base px-8 py-6 rounded-lg shadow-md hover:shadow-lg transition-all"
+            >
+              <a
+                href="https://wa.me/5500000000000"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <MessageCircle size={20} />
+                Agendar Atendimento
+              </a>
+            </Button>
+          </motion.div>
+
+          {/* Photo placeholder */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.7, delay: 0.2 }}
+            className="order-1 md:order-2 flex justify-center"
+          >
+            <div className="w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-2xl bg-secondary flex items-center justify-center border border-border overflow-hidden">
+              <User size={80} className="text-muted-foreground/40" />
+            </div>
+          </motion.div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default HeroSection;
