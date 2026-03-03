@@ -15,6 +15,9 @@ const HeroSection = () => {
             transition={{ duration: 0.7 }}
             className="order-2 md:order-1"
           >
+            <div className="h-14 w-40 rounded bg-muted border border-border flex items-center justify-center mb-6">
+              <span className="text-xs text-muted-foreground">Logo</span>
+            </div>
             <span className="inline-block text-accent font-semibold text-sm tracking-wider uppercase mb-4">
               Cuidado integral e contínuo
             </span>
