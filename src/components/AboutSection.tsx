@@ -16,19 +16,10 @@ const AboutSection = () => {
           </h2>
           <div className="space-y-5 text-muted-foreground leading-relaxed text-base md:text-lg">
             <p>
-              Acredito em uma medicina centrada na pessoa, que enxerga o paciente além da queixa
-              pontual. Minha prática é guiada pela <strong className="text-foreground">visão sistêmica</strong>, 
-              considerando o contexto familiar, social e emocional de cada indivíduo.
-            </p>
-            <p>Como médico de família, atuo tanto na Atenção Primária à Saúde (APS), porta de entrada do cuidado no SUS, como também em ambiente particular no consultório e através da Teleconsulta. Acompanho pessoas ao longo de toda a vida, promovendo prevenção, diagnóstico precoce e tratamento contínuo.
-              <strong className="text-foreground">Atenção Primária à Saúde (APS)</strong>, 
-              porta de entrada do cuidado no SUS. Acompanho pessoas ao longo de toda a vida, 
-              promovendo prevenção, diagnóstico precoce e tratamento contínuo.
+              Minha prática médica é construída sobre um pilar que se tornou raro: o tempo. No atendimento particular, ofereço uma medicina centrada em você, sem a pressa habitual dos prontos-socorros ou planos de saúde. Como Médico de Família, meu papel é ser o seu <strong className="text-foreground">médico de confiança</strong>. Eu não olho apenas para uma queixa isolada, mas mapeio seu histórico, estilo de vida e contexto familiar para criar um plano de cuidado altamente personalizado.
             </p>
             <p>
-              Também exerço o papel de <strong className="text-foreground">preceptor de residência médica</strong>, 
-              contribuindo para a formação de novos médicos de família comprometidos com a 
-              saúde pública de qualidade.
+              Resolvo a grande maioria das suas demandas de saúde de forma integral, promovendo prevenção real e tratamentos assertivos. Trago para o consultório a expertise de quem atua na formação de novos médicos como <strong className="text-foreground">preceptor de residência</strong>, o que me exige atualização constante e garante a você um cuidado pautado nas melhores evidências científicas.
             </p>
           </div>
         </motion.div>
