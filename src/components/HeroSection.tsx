@@ -30,7 +30,7 @@ const HeroSection = () => {
               className="bg-primary text-primary-foreground hover:bg-primary/90 gap-2 text-base px-8 py-6 rounded-lg shadow-md hover:shadow-lg transition-all"
             >
               <a
-                href="https://wa.me/5500000000000"
+                href="https://wa.me/5581992871707"
                 target="_blank"
                 rel="noopener noreferrer"
               >
