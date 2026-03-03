@@ -16,7 +16,7 @@ const HeroSection = () => {
             transition={{ duration: 0.7 }}
             className="order-2 md:order-1"
           >
-            <img src={logo} alt="Logo Edvaldo Jerônimo" className="h-16 w-auto mb-6" />
+            <img src={logo} alt="Logo Edvaldo Jerônimo" className="h-44 md:h-52 w-auto mb-6" />
             <span className="inline-block text-accent font-semibold text-sm tracking-wider uppercase mb-4">
               Cuidado integral e contínuo
             </span>

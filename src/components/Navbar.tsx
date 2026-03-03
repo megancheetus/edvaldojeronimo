@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
-import logo from "@/assets/logo.png";
 
 const navLinks = [
   { label: "Sobre", href: "#sobre" },
@@ -27,8 +26,8 @@ const Navbar = () => {
       }`}
     >
       <div className="container mx-auto flex items-center justify-between px-6 py-4">
-        <a href="#" className="flex items-center">
-          <img src={logo} alt="Logo Edvaldo Jerônimo" className="h-10 w-auto" />
+        <a href="#" className="text-lg font-bold text-primary tracking-tight">
+          Edvaldo Jerônimo
         </a>
 
         {/* Desktop */}
