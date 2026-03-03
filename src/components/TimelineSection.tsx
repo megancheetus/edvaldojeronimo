@@ -15,7 +15,7 @@ const items = [
   {
     icon: BookOpen,
     title: "Graduação em Medicina",
-    subtitle: "[Inserir nome da faculdade]",
+    subtitle: "Universidade de Pernambuco, Faculdade de Ciências Médicas, Recife - PE",
   },
 ];
 
