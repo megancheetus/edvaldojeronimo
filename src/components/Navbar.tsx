@@ -1,12 +1,14 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import { Link as RouterLink } from "react-router-dom";
 
 const navLinks = [
-  { label: "Sobre", href: "#sobre" },
-  { label: "Atuação", href: "#atuacao" },
-  { label: "Formação", href: "#formacao" },
-  { label: "Contato", href: "#contato" },
+  { label: "Sobre", href: "#sobre", isHash: true },
+  { label: "Atuação", href: "#atuacao", isHash: true },
+  { label: "Formação", href: "#formacao", isHash: true },
+  { label: "Blog", href: "/blog", isHash: false },
+  { label: "Contato", href: "#contato", isHash: true },
 ];
 
 const Navbar = () => {
@@ -33,13 +35,23 @@ const Navbar = () => {
         {/* Desktop */}
         <nav className="hidden md:flex gap-8">
           {navLinks.map((l) => (
-            <a
-              key={l.href}
-              href={l.href}
-              className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
-            >
-              {l.label}
-            </a>
+            l.isHash ? (
+              <a
+                key={l.href}
+                href={l.href}
+                className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
+              >
+                {l.label}
+              </a>
+            ) : (
+              <RouterLink
+                key={l.href}
+                to={l.href}
+                className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
+              >
+                {l.label}
+              </RouterLink>
+            )
           ))}
         </nav>
 
@@ -64,14 +76,25 @@ const Navbar = () => {
           >
             <div className="flex flex-col gap-4 px-6 py-6">
               {navLinks.map((l) => (
-                <a
-                  key={l.href}
-                  href={l.href}
-                  onClick={() => setMobileOpen(false)}
-                  className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
-                >
-                  {l.label}
-                </a>
+                l.isHash ? (
+                  <a
+                    key={l.href}
+                    href={l.href}
+                    onClick={() => setMobileOpen(false)}
+                    className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
+                  >
+                    {l.label}
+                  </a>
+                ) : (
+                  <RouterLink
+                    key={l.href}
+                    to={l.href}
+                    onClick={() => setMobileOpen(false)}
+                    className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
+                  >
+                    {l.label}
+                  </RouterLink>
+                )
               ))}
             </div>
           </motion.nav>
