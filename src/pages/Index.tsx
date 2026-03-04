@@ -5,6 +5,7 @@ import ModalidadesSection from "@/components/ModalidadesSection";
 import AreasSection from "@/components/AreasSection";
 import TimelineSection from "@/components/TimelineSection";
 import ContactSection from "@/components/ContactSection";
+import GoogleReviewsSection from "@/components/GoogleReviewsSection";
 import Footer from "@/components/Footer";
 
 const Index = () => {
@@ -17,6 +18,7 @@ const Index = () => {
       <AreasSection />
       <TimelineSection />
       <ContactSection />
+      <GoogleReviewsSection />
       <Footer />
     </div>
   );
