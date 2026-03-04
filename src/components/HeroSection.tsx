@@ -16,7 +16,7 @@ const HeroSection = () => {
             transition={{ duration: 0.7 }}
             className="order-2 md:order-1">
             
-            <img src={logo} alt="Logo Edvaldo Jerônimo" className="h-44 md:h-52 w-auto mb-6" />
+ <img src={logo} alt="Logo Edvaldo Jerônimo" className="h-56 md:h-64 lg:h-72 w-auto mb-6" />
             <span className="inline-block text-accent font-semibold text-sm tracking-wider uppercase mb-4">
               Cuidado integral e contínuo
             </span>
@@ -49,12 +49,12 @@ const HeroSection = () => {
             transition={{ duration: 0.7, delay: 0.2 }}
             className="order-1 md:order-2 flex justify-center">
             
-            <div className="w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-2xl bg-secondary flex items-center justify-center border border-border overflow-hidden">
+            <div className="w-full h-96 md:w-full md:h-[500px] lg:w-full lg:h-[600px] rounded-2xl bg-secondary flex items-center justify-center border border-border overflow-hidden">
               <img
-
+                src={fotoProfissional}
                 alt="Dr. Edvaldo Jerônimo da Silva Júnior"
-                className="w-full h-full object-cover object-top" src="/lovable-uploads/3f4c0b0a-340e-416e-90fe-0c8f5ebd544c.png" />
-              
+                className="w-full h-full object-cover object-top"
+              />
             </div>
           </motion.div>
         </div>

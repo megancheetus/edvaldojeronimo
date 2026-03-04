@@ -26,7 +26,7 @@ const Navbar = () => {
       }`}
     >
       <div className="container mx-auto flex items-center justify-between px-6 py-4">
-        <a href="#" className="text-lg font-bold text-primary tracking-tight">
+        <a href="#" className="text-2xl font-bold text-primary tracking-tight">
           Edvaldo Jerônimo
         </a>
 
