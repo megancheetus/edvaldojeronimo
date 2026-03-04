@@ -8,7 +8,7 @@ const HeroSection = () => {
   return (
     <section className="min-h-screen flex items-center pt-20 pb-16 md:pb-24">
       <div className="container mx-auto px-6">
-        <div className="grid md:grid-cols-2 gap-12 md:gap-16 items-center">
+        <div className="grid md:grid-cols-2 gap-8 md:gap-16 items-center">
           {/* Text */}
           <motion.div
             initial={{ opacity: 0, y: 24 }}
@@ -16,14 +16,14 @@ const HeroSection = () => {
             transition={{ duration: 0.7 }}
             className="order-2 md:order-1">
             
- <img src={logo} alt="Logo Edvaldo Jerônimo" className="h-56 md:h-64 lg:h-72 w-auto mb-6" />
+            <img src={logo} alt="Logo Edvaldo Jerônimo" className="h-32 md:h-64 lg:h-72 w-auto mb-4 md:mb-6" />
             <span className="inline-block text-accent font-semibold text-sm tracking-wider uppercase mb-4">
               Cuidado integral e contínuo
             </span>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-primary leading-tight mb-6">
+            <h1 className="text-3xl md:text-5xl lg:text-6xl font-extrabold text-primary leading-tight mb-6">
               Médico de Família<br />e Comunidade.
             </h1>
-            <p className="text-lg text-muted-foreground mb-8 max-w-md">
+            <p className="text-base md:text-lg text-muted-foreground mb-8 max-w-md">
               Foco na pessoa e promoção da saúde.
             </p>
             <Button
@@ -49,7 +49,7 @@ const HeroSection = () => {
             transition={{ duration: 0.7, delay: 0.2 }}
             className="order-1 md:order-2 flex justify-center">
             
-            <div className="w-full h-96 md:w-full md:h-[500px] lg:w-full lg:h-[600px] rounded-2xl bg-secondary flex items-center justify-center border border-border overflow-hidden">
+            <div className="w-full h-64 sm:h-80 md:h-[500px] lg:h-[600px] rounded-2xl bg-secondary flex items-center justify-center border border-border overflow-hidden shadow-lg">
               <img
                 src={fotoProfissional}
                 alt="Dr. Edvaldo Jerônimo da Silva Júnior"
