@@ -97,17 +97,8 @@ const ReviewsSection = () => {
   return (
     <section className="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
       <div className="text-center mb-12">
-<<<<<<< HEAD
         <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Avaliações de Pacientes</h2>
         <p className="text-lg text-gray-600">Confira o que meus pacientes têm a dizer sobre o atendimento</p>
-=======
-        <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
-          Avaliações de Pacientes
-        </h2>
-        <p className="text-lg text-gray-600">
-          Confira o que meus pacientes têm a dizer sobre o atendimento
-        </p>
->>>>>>> 2d163e81433bac169ea7c26950a867d37493134e
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -127,25 +118,13 @@ const ReviewsSection = () => {
         </div>
         <p className="text-2xl font-bold text-gray-900 mb-2">5.0 de 5 estrelas</p>
         <p className="text-gray-600 mb-6">(4 avaliações verificadas)</p>
-<<<<<<< HEAD
 
-=======
-        
->>>>>>> 2d163e81433bac169ea7c26950a867d37493134e
         {/* Google Reviews Button */}
         <Button
           asChild
           className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold flex items-center gap-2 mx-auto"
         >
-<<<<<<< HEAD
           <a href="https://g.page/r/CQQZiGW2lDCQEAE/review" target="_blank" rel="noopener noreferrer">
-=======
-          <a
-            href="https://g.page/r/CQQZiGW2lDCQEAE/review"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
->>>>>>> 2d163e81433bac169ea7c26950a867d37493134e
             <Star className="w-4 h-4" />
             Deixar uma Avaliação no Google
             <ExternalLink className="w-4 h-4" />

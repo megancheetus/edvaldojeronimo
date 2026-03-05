@@ -13,21 +13,18 @@ const items = [
     icon: Award,
     title: "Título de Especialista em Medicina de Família e Comunidade",
     subtitle: "Sociedade Brasileira de Medicina de Família e Comunidade (SBMFC)",
-    year: "2024",
   },
   {
     year: 2025,
     icon: GraduationCap,
     title: "Preceptor de Residência Médica em MFC",
     subtitle: "Formação prática de residentes no contexto do SUS",
-    year: "2025",
   },
   {
     year: 2020,
     icon: BookOpen,
     title: "Graduação em Medicina",
     subtitle: "Universidade de Pernambuco, Faculdade de Ciências Médicas, Recife - PE",
-    year: "2020",
   },
 ];
 
