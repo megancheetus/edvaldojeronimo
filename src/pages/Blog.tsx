@@ -1,6 +1,7 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { blogPosts } from "@/data/blogPosts";
+import Navbar from "@/components/Navbar";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
 import { Calendar, Clock, Tag } from "lucide-react";
@@ -21,6 +22,32 @@ const Blog = () => {
   const sortedPosts = [...filteredPosts].sort(
     (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
   );
+
+  // Update document title and meta tags when on Blog page
+  useEffect(() => {
+    const previousTitle = document.title;
+    document.title = "Edvaldo Jerônimo - Blog";
+
+    const ogTitle = document.querySelector('meta[property="og:title"]') as HTMLMetaElement | null;
+    const twitterTitle = document.querySelector('meta[name="twitter:title"]') as HTMLMetaElement | null;
+    const prevOg = ogTitle?.getAttribute("content") ?? null;
+    const prevTwitter = twitterTitle?.getAttribute("content") ?? null;
+
+    if (ogTitle) ogTitle.setAttribute("content", "Edvaldo Jerônimo - Blog");
+    if (twitterTitle) twitterTitle.setAttribute("content", "Edvaldo Jerônimo - Blog");
+
+    return () => {
+      document.title = previousTitle;
+      if (ogTitle) {
+        if (prevOg !== null) ogTitle.setAttribute("content", prevOg);
+        else ogTitle.removeAttribute("content");
+      }
+      if (twitterTitle) {
+        if (prevTwitter !== null) twitterTitle.setAttribute("content", prevTwitter);
+        else twitterTitle.removeAttribute("content");
+      }
+    };
+  }, []);
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -53,21 +80,37 @@ const Blog = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <Navbar />
       {/* Header */}
-      <section className="py-16 md:py-24 bg-gradient-to-b from-primary/5 to-transparent border-b border-primary/10">
+      <section className="pt-24 pb-16 md:pt-28 md:pb-24 bg-gradient-to-b from-primary/5 to-transparent border-b border-primary/10">
         <div className="container mx-auto px-6">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="max-w-3xl">
-            <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
-              Blog de Saúde
-            </h1>
-            <p className="text-lg text-muted-foreground">
-              Artigos e dicas sobre medicina, saúde preventiva e bem-estar para
-              você e sua família.
-            </p>
+            className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
+            <div>
+              <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
+                Blog de Saúde
+              </h1>
+              <p className="text-lg text-muted-foreground">
+                Artigos e dicas sobre medicina, saúde preventiva e bem-estar para
+                você e sua família.
+              </p>
+            </div>
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="hidden md:flex items-center justify-center">
+              <div className="w-288 h-96 rounded-lg overflow-hidden flex items-center justify-center">
+                <img
+                  src={new URL("../assets/logo.png", import.meta.url).href}
+                  alt="Logo"
+                  className="w-full h-full object-contain p-4"
+                />
+              </div>
+            </motion.div>
           </motion.div>
         </div>
       </section>

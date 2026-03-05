@@ -2,6 +2,7 @@ import { useParams, useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import ReactMarkdown from "react-markdown";
 import { blogPosts } from "@/data/blogPosts";
+import Navbar from "@/components/Navbar";
 import { Badge } from "@/components/ui/badge";
 import { Calendar, Clock, Tag, ArrowLeft } from "lucide-react";
 
@@ -12,24 +13,27 @@ const BlogPost = () => {
 
   if (!post) {
     return (
-      <div className="min-h-screen bg-background flex flex-col items-center justify-center">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          className="text-center max-w-md">
-          <h1 className="text-4xl font-bold text-foreground mb-2">
-            Artigo não encontrado
-          </h1>
-          <p className="text-muted-foreground mb-8">
-            Desculpe, o artigo que você procura não existe.
-          </p>
-          <button
-            onClick={() => navigate("/blog")}
-            className="inline-flex items-center gap-2 bg-primary text-primary-foreground hover:bg-primary/90 font-semibold py-2 px-6 rounded-lg transition-colors">
-            <ArrowLeft size={18} />
-            Voltar ao Blog
-          </button>
-        </motion.div>
+      <div className="min-h-screen bg-background">
+        <Navbar />
+        <div className="pt-24 md:pt-28 min-h-screen flex flex-col items-center justify-center px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="text-center max-w-md">
+            <h1 className="text-4xl font-bold text-foreground mb-2">
+              Artigo não encontrado
+            </h1>
+            <p className="text-muted-foreground mb-8">
+              Desculpe, o artigo que você procura não existe.
+            </p>
+            <button
+              onClick={() => navigate("/blog")}
+              className="inline-flex items-center gap-2 bg-primary text-primary-foreground hover:bg-primary/90 font-semibold py-2 px-6 rounded-lg transition-colors">
+              <ArrowLeft size={18} />
+              Voltar ao Blog
+            </button>
+          </motion.div>
+        </div>
       </div>
     );
   }
@@ -45,8 +49,9 @@ const BlogPost = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <Navbar />
       {/* Header */}
-      <section className="py-12 md:py-16 bg-gradient-to-b from-primary/5 to-transparent border-b border-primary/10">
+      <section className="pt-24 pb-12 md:pt-28 md:pb-16 bg-gradient-to-b from-primary/5 to-transparent border-b border-primary/10">
         <div className="container mx-auto px-6">
           <motion.button
             initial={{ opacity: 0, x: -20 }}

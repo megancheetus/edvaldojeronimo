@@ -3,21 +3,33 @@ import { motion } from "framer-motion";
 
 const items = [
   {
+    year: 2025,
+    icon: GraduationCap,
+    title: "Curso de Especialização em Medicina de Família e Comunidade (CEMFC)",
+    subtitle: "Universidade Federal de Minas Gerais",
+  },
+  {
+    year: 2024,
     icon: Award,
     title: "Título de Especialista em Medicina de Família e Comunidade",
     subtitle: "Sociedade Brasileira de Medicina de Família e Comunidade (SBMFC)",
   },
   {
+    year: 2025,
     icon: GraduationCap,
     title: "Preceptor de Residência Médica em MFC",
     subtitle: "Formação prática de residentes no contexto do SUS",
   },
   {
+    year: 2020,
     icon: BookOpen,
     title: "Graduação em Medicina",
     subtitle: "Universidade de Pernambuco, Faculdade de Ciências Médicas, Recife - PE",
   },
 ];
+
+// Sort items by year (descending - most recent first)
+const sortedItems = [...items].sort((a, b) => b.year - a.year);
 
 const TimelineSection = () => {
   return (
@@ -38,7 +50,7 @@ const TimelineSection = () => {
           <div className="absolute left-6 top-0 bottom-0 w-px bg-border hidden md:block" />
 
           <div className="space-y-10">
-            {items.map((item, i) => (
+            {sortedItems.map((item, i) => (
               <motion.div
                 key={i}
                 initial={{ opacity: 0, x: -20 }}
