@@ -20,7 +20,7 @@ const ContactSection = () => {
           <div className="flex items-center justify-center gap-2 text-muted-foreground mb-8">
             <MapPin size={18} />
             <p className="text-sm md:text-base">
-              Rua Artur Antônio da Silva, 481 — Bairro Universitário, Caruaru-PE, 55002-970
+              Rua Padre Antônio Tomaz, nº 91 - Mauricio de Nassau - Caruaru / PE
             </p>
           </div>
 

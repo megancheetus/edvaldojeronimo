@@ -13,18 +13,21 @@ const items = [
     icon: Award,
     title: "Título de Especialista em Medicina de Família e Comunidade",
     subtitle: "Sociedade Brasileira de Medicina de Família e Comunidade (SBMFC)",
+    year: "2024",
   },
   {
     year: 2025,
     icon: GraduationCap,
     title: "Preceptor de Residência Médica em MFC",
     subtitle: "Formação prática de residentes no contexto do SUS",
+    year: "2025",
   },
   {
     year: 2020,
     icon: BookOpen,
     title: "Graduação em Medicina",
     subtitle: "Universidade de Pernambuco, Faculdade de Ciências Médicas, Recife - PE",
+    year: "2020",
   },
 ];
 
@@ -63,9 +66,14 @@ const TimelineSection = () => {
                   <item.icon size={20} className="text-primary-foreground" />
                 </div>
                 <div className="pt-1">
-                  <h3 className="text-base md:text-lg font-semibold text-foreground mb-1">
-                    {item.title}
-                  </h3>
+                  <div className="flex items-baseline gap-2 mb-1">
+                    <h3 className="text-base md:text-lg font-semibold text-foreground">
+                      {item.title}
+                    </h3>
+                    <span className="text-sm font-medium text-primary">
+                      {item.year}
+                    </span>
+                  </div>
                   <p className="text-sm text-muted-foreground">
                     {item.subtitle}
                   </p>

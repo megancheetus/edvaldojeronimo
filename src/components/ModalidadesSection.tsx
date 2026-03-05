@@ -11,7 +11,7 @@ const planos = [
 },
 {
   icon: CalendarCheck,
-  title: "Consulta com Direito a Retorno",
+  title: "Consulta com direito a retorno",
   description:
   "Indicada quando há necessidade de solicitação de exames complementares. Inclui uma segunda sessão para análise de resultados e definição da conduta terapêutica dentro do prazo acordado de no máximo 30 dias."
 },
@@ -107,7 +107,7 @@ const ModalidadesSection = () => {
           transition={{ duration: 0.5 }}
           className="text-xl md:text-2xl font-semibold text-foreground text-center mb-8">
           
-          Tipos de Plano de Cuidado
+          Tipos de Cuidado
         </motion.h3>
 
         <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
