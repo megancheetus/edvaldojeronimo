@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { blogPosts } from "@/data/blogPosts";
 import Navbar from "@/components/Navbar";
@@ -172,8 +173,8 @@ const Blog = () => {
                     <div className="flex-1 pb-8">
                       <Card className="h-full hover:shadow-lg transition-shadow duration-300 bg-section-alt border-section-border">
                         <CardContent className="p-6">
-                          <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4 mb-4">
-                            <div>
+                          <div className="flex flex-col md:flex-row gap-4 mb-4">
+                            <div className="flex-1">
                               <div className="flex items-center gap-2 mb-3 flex-wrap">
                                 <Badge variant="outline" className="text-xs">
                                   {post.category}
@@ -184,10 +185,21 @@ const Blog = () => {
                                   </Badge>
                                 )}
                               </div>
-                              <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-2 hover:text-primary transition-colors cursor-pointer">
-                                {post.title}
-                              </h2>
+                              <Link to={`/blog/${post.id}`} className="block">
+                                <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-2 hover:text-primary transition-colors cursor-pointer">
+                                  {post.title}
+                                </h2>
+                              </Link>
                             </div>
+                            {post.thumbnail && (
+                              <div className="w-full md:w-40 h-32 md:h-auto flex-shrink-0 rounded-lg overflow-hidden">
+                                <img
+                                  src={post.thumbnail}
+                                  alt={post.title}
+                                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                                />
+                              </div>
+                            )}
                           </div>
 
                           <p className="text-muted-foreground mb-4 leading-relaxed">

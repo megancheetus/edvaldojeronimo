@@ -103,6 +103,18 @@ const BlogPost = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
             className="max-w-3xl mx-auto">
+            {post.thumbnail && (
+              <div className="mb-8 rounded-lg overflow-hidden h-96 md:h-96 w-full">
+                <motion.img
+                  initial={{ opacity: 0, scale: 0.95 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  transition={{ delay: 0.3, duration: 0.6 }}
+                  src={post.thumbnail}
+                  alt={post.title}
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            )}
             <ReactMarkdown
               components={{
                 h1: ({ node, ...props }) => (

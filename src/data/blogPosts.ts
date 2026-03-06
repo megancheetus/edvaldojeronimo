@@ -9,6 +9,7 @@ export interface BlogPost {
   category: string;
   tags: string[];
   featured?: boolean;
+  thumbnail?: string;
 }
 
 export const blogPosts: BlogPost[] = [
@@ -35,10 +36,11 @@ Investir em saúde não é colecionar laudos normais, mas sim construir um plano
     category: "Saúde Preventiva",
     tags: ["prevenção", "medicina de família", "check-up"],
     featured: true,
+    thumbnail: "https://gruposhbrasil.com.br/cache/12checkup_178986ff4359f3bc29bbb5b9f07e9355.jpg",
   },
   {
     id: "2",
-    title: "Por que você não consegue dormir? O perigo das pílulas mágicas",
+    title: "Por que você não consegue dormir? O perigo dos medicamentos \"tarja preta\" ",
     excerpt: "A insônia é um sintoma, não a doença. Descubra por que a higiene do sono é o único tratamento real e definitivo a longo prazo.",
     content: `Vivemos uma epidemia de uso de medicamentos para dormir. Fármacos como o zolpidem e os benzodiazepínicos (clonazepam, diazepam) são frequentemente prescritos como primeira linha para a insônia, mas a ciência nos mostra que essa é uma abordagem perigosa e insustentável.
 
@@ -58,6 +60,7 @@ Se o sono não vem, não lute na cama. Levante-se, vá para um ambiente com luz 
     readTime: 5,
     category: "Saúde do Sono",
     tags: ["insônia", "higiene do sono", "ansiedade"],
+    thumbnail: "https://netsonoblog.com.br/wp-content/uploads/2024/06/insonia.png",
     featured: true,
   },
   {
@@ -85,6 +88,7 @@ A prescrição é simples: encontre uma atividade que você tolere fazer pelo re
     date: "2026-02-28",
     readTime: 4,
     category: "Estilo de Vida",
+    thumbnail: "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=500&h=300&fit=crop",
     tags: ["exercício", "hipertensão", "diabetes"],
   },
 ];
