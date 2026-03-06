@@ -4,15 +4,15 @@ import { motion } from "framer-motion";
 const areas = [
   {
     icon: HeartPulse,
-    title: "Atendimento Clínico",
+    title: "Atendimento em Clínica Geral",
     description:
-      "Acompanhamento longitudinal, prevenção e tratamento no contexto familiar e comunitário.",
+      "Acompanhamento longitudinal especializado em medicina de família, prevenção e tratamento no contexto familiar e comunitário. Atendo em Caruaru e ofereço teleconsulta para Limoeiro.",
   },
   {
     icon: GraduationCap,
     title: "Preceptoria de Residência",
     description:
-      "Orientação e formação prática de médicos residentes no SUS.",
+      "Formação prática de médicos residentes no SUS, garantindo atualização constante em medicina de família e as melhores evidências clínicas para seus atendimentos.",
   },
 ];
 
@@ -27,7 +27,7 @@ const AreasSection = () => {
           transition={{ duration: 0.5 }}
           className="text-3xl md:text-4xl font-bold text-primary mb-14 text-center"
         >
-          Áreas de Atuação
+          Áreas de Atuação - Especialista em Medicina de Família
         </motion.h2>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-4xl mx-auto">

@@ -14,14 +14,26 @@ const ContactSection = () => {
           className="max-w-2xl mx-auto text-center"
         >
           <h2 className="text-3xl md:text-4xl font-bold text-primary mb-6">
-            Contato e Localização
+            Contato e Localização - Consultório em Caruaru
           </h2>
 
           <div className="flex items-center justify-center gap-2 text-muted-foreground mb-8">
             <MapPin size={18} />
             <p className="text-sm md:text-base">
-              Rua Padre Antônio Tomaz, nº 91 - Mauricio de Nassau - Caruaru / PE
+              <strong>Caruaru, PE:</strong> Rua Padre Antônio Tomaz, nº 91 - Mauricio de Nassau<br/>
+              <strong>Atendo também em:</strong> Limoeiro (via teleconsulta)
             </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-4 mb-8 max-w-md mx-auto">
+            <div className="p-4 rounded-lg border border-border bg-card">
+              <p className="text-sm font-semibold text-foreground mb-2">Telefone / WhatsApp</p>
+              <p className="text-base text-accent font-bold">(81) 99287-1707</p>
+            </div>
+            <div className="p-4 rounded-lg border border-border bg-card">
+              <p className="text-sm font-semibold text-foreground mb-2">Especialidade</p>
+              <p className="text-base text-accent font-bold">Medicina de Família</p>
+            </div>
           </div>
 
           <Button
@@ -33,6 +45,7 @@ const ContactSection = () => {
               href="https://wa.me/5581992871707"
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="Contato com Dr. Edvaldo via WhatsApp"
             >
               <MessageCircle size={22} />
               Falar pelo WhatsApp

@@ -16,15 +16,15 @@ const HeroSection = () => {
             transition={{ duration: 0.7 }}
             className="order-2 md:order-1">
             
-            <img src={logo} alt="Logo Edvaldo Jerônimo" className="w-64 md:w-80 lg:w-96 aspect-[3/1] object-contain mb-6" />
+            <img src={logo} alt="Logo Dr. Edvaldo Jerônimo - Médico de Família em Caruaru" className="w-64 md:w-80 lg:w-96 aspect-[3/1] object-contain mb-6" />
             <span className="inline-block text-accent font-semibold text-sm tracking-wider uppercase mb-4">
               Cuidado integral e contínuo
             </span>
             <h1 className="text-3xl md:text-5xl lg:text-6xl font-extrabold text-primary leading-tight mb-6">
-              Médico de Família<br />e Comunidade.
+              Médico de Família em <br />Caruaru e Região
             </h1>
             <p className="text-base md:text-lg text-muted-foreground mb-8 max-w-md">
-              Foco na pessoa e promoção da saúde.
+              Clínico geral especializado em Medicina de Família. Atendimento personalizado com foco na sua saúde integral.
             </p>
             <Button
               asChild
@@ -34,7 +34,8 @@ const HeroSection = () => {
               <a
                 href="https://wa.me/5581992871707"
                 target="_blank"
-                rel="noopener noreferrer">
+                rel="noopener noreferrer"
+                aria-label="Agendar atendimento médico com Dr. Edvaldo pelo WhatsApp">
                 
                 <MessageCircle size={20} />
                 Agendar Atendimento
@@ -52,7 +53,7 @@ const HeroSection = () => {
             <div className="w-full h-64 sm:h-80 md:h-[500px] lg:h-[600px] rounded-2xl bg-secondary flex items-center justify-center border border-border overflow-hidden shadow-lg">
               <img
                 src={fotoProfissional}
-                alt="Dr. Edvaldo Jerônimo da Silva Júnior"
+                alt="Dr. Edvaldo Jerônimo da Silva Júnior - Médico de Família especialista em Caruaru"
                 className="w-full h-full object-cover object-top"
               />
             </div>

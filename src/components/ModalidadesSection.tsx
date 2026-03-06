@@ -7,19 +7,19 @@ const planos = [
   icon: Stethoscope,
   title: "Consulta Avulsa",
   description:
-  "Focada em uma queixa específica ou pontual. Ideal para resoluções imediatas e avaliações iniciais de saúde, renovação de receituário, solicitação de exames."
+  "Consulta médica focada em uma queixa específica ou demanda imediata. Ideal para atendimento em clínica geral, avaliações iniciais, renovação de receituário e solicitação de exames. Perfeita para pacientes de Caruaru e Limoeiro que precisam de uma consulta pontual."
 },
 {
   icon: CalendarCheck,
-  title: "Consulta com direito a retorno",
+  title: "Consulta com Direito a Retorno",
   description:
-  "Indicada quando há necessidade de solicitação de exames complementares. Inclui uma segunda sessão para análise de resultados e definição da conduta terapêutica dentro do prazo acordado de no máximo 30 dias."
+  "Indicada para medicina de família quando há solicitação de exames complementares. Inclui avaliação inicial completa e segunda sessão para análise de resultados, com condutas terapêuticas assertivas em até 30 dias. Atendimento especializados em clínica geral."
 },
 {
   icon: Layers,
-  title: "Pacotes de Acompanhamento",
+  title: "Pacotes de Acompanhamento Médico",
   description:
-  "O modelo ideal para a Medicina de Família. Planejado para quem busca continuidade no cuidado, controle de condições crônicas ou check-ups preventivos ao longo do ano (hipertensos, diabéticos, saúde mental, entre outros)."
+  "O modelo ideal da medicina de família para cuidado continuado. Planejado para controle de condições crônicas, check-ups preventivos, hipertensos, diabéticos e saúde mental. Atendimento de médico de confiança ao longo do ano."
 }];
 
 
@@ -36,10 +36,10 @@ const ModalidadesSection = () => {
           className="text-center mb-14">
           
           <h2 className="text-3xl md:text-4xl font-bold text-primary mb-3">
-            Como funcionam os atendimentos
+            Formas de Atendimento - Médico em Caruaru e Limoeiro
           </h2>
           <p className="text-muted-foreground text-base md:text-lg max-w-xl mx-auto">
-            Opções flexíveis para um cuidado integral, presencial ou onde você estiver.
+            Opções flexíveis para um cuidado integral em clínica geral, presencial em Caruaru ou teleconsulta.
           </p>
         </motion.div>
 
@@ -54,10 +54,10 @@ const ModalidadesSection = () => {
           <Tabs defaultValue="presencial" className="w-full">
             <TabsList className="grid w-full grid-cols-2">
               <TabsTrigger value="presencial" className="gap-2">
-                <MapPin size={16} /> Presencial
+                <MapPin size={16} /> Presencial em Caruaru
               </TabsTrigger>
               <TabsTrigger value="teleconsulta" className="gap-2">
-                <Video size={16} /> Teleconsulta
+                <Video size={16} /> Teleconsulta 
               </TabsTrigger>
             </TabsList>
 
@@ -69,9 +69,9 @@ const ModalidadesSection = () => {
                   </div>
                   <div>
                     <h3 className="text-lg font-semibold text-foreground mb-1">
-                      Atendimento Presencial
+                      Atendimento Presencial em Caruaru
                     </h3>
-                    <p className="text-muted-foreground text-sm leading-relaxed">Uma consulta com o tempo que você merece. Avaliação clínica completa em um ambiente acolhedor, ideal para quem busca uma escuta atenta, exame físico minucioso e a construção de um plano de cuidado que respeite o seu contexto de vida.
+                    <p className="text-muted-foreground text-sm leading-relaxed">Consulta médica com o tempo que você merece no consultório em Caruaru, bairro Mauricio de Nassau. Avaliação clínica completa em ambiente acolhedor, com escuta atenta, exame físico minucioso e construção personalizada de plano de cuidado. Especializado em medicina de família e clínica geral.
 
                     </p>
                   </div>
@@ -87,10 +87,10 @@ const ModalidadesSection = () => {
                   </div>
                   <div>
                     <h3 className="text-lg font-semibold text-foreground mb-1">
-                      Teleconsulta
+                      Teleconsulta para Limoeiro e Região
                     </h3>
                     <p className="text-muted-foreground text-sm leading-relaxed">
-                      Consulta por vídeo segura e prática, ideal para triagens, renovação de receitas ou pacientes com mobilidade reduzida.
+                      Consulta por vídeo segura para pacientes de Limoeiro, Caruaru e região. Ideal para triagens, renovação de receitas, orientações clínicas e seguimento de condições crônicas. Acesso facilitado a médico de família especialista sem necessidade de locomoção.
                     </p>
                   </div>
                 </div>
@@ -107,7 +107,7 @@ const ModalidadesSection = () => {
           transition={{ duration: 0.5 }}
           className="text-xl md:text-2xl font-semibold text-foreground text-center mb-8">
           
-          Tipos de Cuidado
+          Tipos de Cuidado Médico
         </motion.h3>
 
         <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
