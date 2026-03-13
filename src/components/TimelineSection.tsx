@@ -14,12 +14,7 @@ const items = [
     title: "Título de Especialista em Medicina de Família e Comunidade",
     subtitle: "Sociedade Brasileira de Medicina de Família e Comunidade (SBMFC)",
   },
-  {
-    year: 2025,
-    icon: GraduationCap,
-    title: "Preceptor de Residência Médica em MFC",
-    subtitle: "Formação prática de residentes no contexto do SUS",
-  },
+
   {
     year: 2020,
     icon: BookOpen,

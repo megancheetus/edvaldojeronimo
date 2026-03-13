@@ -8,12 +8,7 @@ const areas = [
     description:
       "Acompanhamento longitudinal especializado em medicina de família, prevenção e tratamento no contexto familiar e comunitário. Atendo em Caruaru e ofereço teleconsulta para Limoeiro.",
   },
-  {
-    icon: GraduationCap,
-    title: "Preceptoria de Residência",
-    description:
-      "Formação prática de médicos residentes no SUS, garantindo atualização constante em medicina de família e as melhores evidências clínicas para seus atendimentos.",
-  },
+
 ];
 
 const AreasSection = () => {
