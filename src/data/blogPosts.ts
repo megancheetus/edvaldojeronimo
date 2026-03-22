@@ -13,8 +13,69 @@ export interface BlogPost {
 }
 
 export const blogPosts: BlogPost[] = [
-  {
+    {
     id: "1",
+    title: "Implanon: O que é, para que serve e por que considerar esse método?",
+    excerpt: "Tomar pílula todos os dias não é a única, nem a melhor forma de evitar uma gravidez para todas as mulheres. Entenda como o Implanon funciona, suas vantagens e seus reais efeitos colaterais.",
+    content: `# Implanon: O que é, para que serve e por que considerar esse método?
+
+A escolha de um método contraceptivo é uma das decisões mais importantes para a saúde e o planejamento familiar de uma mulher. Com a rotina agitada, lembrar de tomar uma pílula todos os dias no mesmo horário pode ser um desafio. É aqui que entram os métodos de longa duração (LARC), sendo o **Implanon** um dos mais seguros e eficazes disponíveis hoje.
+
+Como Médico de Família e Comunidade, meu papel é orientar você com base em evidências científicas sólidas, para que possamos tomar juntos a melhor decisão para o seu corpo. Vamos entender exatamente o que é o Implanon e como ele funciona?
+
+## O que é o Implanon?
+
+O Implanon é um implante contraceptivo subdérmico. Na prática, é um pequeno bastão de silicone flexível, do tamanho de um palito de fósforo, que é inserido logo abaixo da pele do braço. 
+
+Ele atua liberando de forma contínua e em baixas doses um hormônio chamado **etonogestrel** (um derivado da progesterona). Esse hormônio impede a ovulação e altera o muco cervical, dificultando a passagem dos espermatozoides.
+
+A sua durabilidade é de **até 3 anos**, podendo ser retirado a qualquer momento caso você decida engravidar ou não se adapte ao método.
+
+## Para que serve o Implanon?
+
+Embora a sua função principal seja evitar a gravidez (com uma **eficácia superior a 99%**, sendo um dos métodos mais seguros do mundo), o Implanon tem outros usos terapêuticos importantes. Ele frequentemente é indicado para:
+
+* **Prevenção da gravidez a longo prazo:** Sem a necessidade de lembrar de tomar medicação diária.
+* **Controle de cólicas menstruais intensas (dismenorreia):** O hormônio ajuda a afinar o revestimento do útero, reduzindo a dor.
+* **Tratamento de sangramento uterino anormal:** Pode diminuir significativamente o fluxo menstrual.
+* **Alívio dos sintomas da endometriose:** É uma excelente ferramenta no manejo da dor pélvica crônica causada por essa condição.
+
+## O Implanon é para todo mundo?
+
+Na medicina, não existe uma receita única que funcione para 100% das pessoas. O Implanon é excelente, mas exige alinhamento de expectativas.
+
+A principal queixa de algumas pacientes é a **alteração no padrão de sangramento**. Enquanto muitas mulheres param de menstruar completamente (amenorreia), outras podem apresentar escapes irregulares (o chamado *spotting*) nos primeiros meses de uso. 
+
+Além disso, por conter apenas progesterona, ele não aumenta o risco de trombose da mesma forma que as pílulas combinadas (que contêm estrogênio). Isso o torna uma opção viável para mulheres com enxaqueca com aura, fumantes ou com histórico de pressão alta. 
+
+No entanto, é fundamental passar por uma avaliação clínica individualizada. Só assim podemos garantir que o método é seguro para o seu histórico de saúde.
+
+## Como é feita a colocação?
+
+O procedimento é simples, rápido e feito no próprio consultório médico. 
+
+1. Aplicamos uma anestesia local no braço para garantir o seu conforto.
+2. O implante é inserido com um aplicador específico, um processo que leva apenas alguns minutos.
+3. Você sai do consultório com um pequeno curativo e pode retomar grande parte das suas atividades normais no mesmo dia, com cuidado apenas para não pegar peso ou realizar esforço físico intenso no braço onde o implante foi colocado.
+
+Como médico e defensor de um **atendimento humanizado**, faço questão de que o momento da inserção seja tranquilo, explicando cada etapa do processo e garantindo que você se sinta segura.
+
+## Dê o próximo passo na sua saúde
+
+A prevenção e o cuidado contínuo são os pilares para uma vida com qualidade e longevidade. Se você deseja parar de se preocupar com a pílula diária ou busca alívio para sintomas menstruais intensos, o implante contraceptivo pode ser a escolha certa.
+
+Quer saber se o Implanon é o método ideal para você? Agende uma avaliação no nosso consultório em **Caruaru, PE**. Vamos conversar, avaliar seu histórico e tomar essa decisão com segurança e baseada na ciência.
+`,
+    author: "Dr. Edvaldo Jerônimo",
+    date: "2026-03-21",
+    readTime: 8,
+    category: "Saúde da Mulher",
+    tags: ["prevenção", "medicina de família", "anticoncepção", "planejamento familiar"],
+    featured: true,
+    thumbnail: "https://www.mdsaude.com/wp-content/uploads/implanon-hero-676x676.jpg",
+  },
+  {
+    id: "2",
     title: "Muito além do check-up: O que é a verdadeira prevenção em saúde?",
     excerpt: "Fazer dezenas de exames sem necessidade não é prevenção. Entenda como a Medicina de Família atua para proteger você de intervenções desnecessárias.",
     content: `Existe um mito muito comum na medicina moderna: a ideia de que fazer uma bateria de exames (o famoso "check-up" completo) todo ano é sinônimo de prevenção. Na realidade, a verdadeira medicina preventiva vai muito além de buscar doenças com exames de imagem ou sangue.
@@ -39,7 +100,7 @@ Investir em saúde não é colecionar laudos normais, mas sim construir um plano
     thumbnail: "https://gruposhbrasil.com.br/cache/12checkup_178986ff4359f3bc29bbb5b9f07e9355.jpg",
   },
   {
-    id: "2",
+    id: "3",
     title: "Por que você não consegue dormir? O perigo dos medicamentos \"tarja preta\" ",
     excerpt: "A insônia é um sintoma, não a doença. Descubra por que a higiene do sono é o único tratamento real e definitivo a longo prazo.",
     content: `Vivemos uma epidemia de uso de medicamentos para dormir. Fármacos como o zolpidem e os benzodiazepínicos (clonazepam, diazepam) são frequentemente prescritos como primeira linha para a insônia, mas a ciência nos mostra que essa é uma abordagem perigosa e insustentável.
@@ -64,7 +125,7 @@ Se o sono não vem, não lute na cama. Levante-se, vá para um ambiente com luz 
     featured: true,
   },
   {
-    id: "3",
+    id: "4",
     title: "Exercício físico não é sobre estética, é prescrição médica",
     excerpt: "Entenda por que a atividade física é o tratamento de primeira linha para hipertensão, diabetes e saúde mental.",
     content: `No consultório, costumo dizer aos pacientes que se os benefícios do exercício físico pudessem ser colocados em uma pílula, ela seria o medicamento mais prescrito, mais eficaz e com menos efeitos colaterais da história da medicina. 
