@@ -117,7 +117,7 @@ const ReviewsSection = () => {
             ))}
         </div>
         <p className="text-2xl font-bold text-gray-900 mb-2">5.0 de 5 estrelas</p>
-        <p className="text-gray-600 mb-6">(4 avaliações verificadas)</p>
+        <p className="text-gray-600 mb-6">(7 avaliações verificadas)</p>
 
         {/* Google Reviews Button */}
         <Button

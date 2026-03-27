@@ -27,15 +27,15 @@ const Blog = () => {
   // Update document title and meta tags when on Blog page
   useEffect(() => {
     const previousTitle = document.title;
-    document.title = "Edvaldo Jerônimo - Blog";
+    document.title = "Dr. Edvaldo Jerônimo | Blog";
 
     const ogTitle = document.querySelector('meta[property="og:title"]') as HTMLMetaElement | null;
     const twitterTitle = document.querySelector('meta[name="twitter:title"]') as HTMLMetaElement | null;
     const prevOg = ogTitle?.getAttribute("content") ?? null;
     const prevTwitter = twitterTitle?.getAttribute("content") ?? null;
 
-    if (ogTitle) ogTitle.setAttribute("content", "Edvaldo Jerônimo - Blog");
-    if (twitterTitle) twitterTitle.setAttribute("content", "Edvaldo Jerônimo - Blog");
+    if (ogTitle) ogTitle.setAttribute("content", "Dr. Edvaldo Jerônimo | Blog");
+    if (twitterTitle) twitterTitle.setAttribute("content", "Dr. Edvaldo Jerônimo | Blog");
 
     return () => {
       document.title = previousTitle;

@@ -5,7 +5,6 @@ import { Link as RouterLink } from "react-router-dom";
 
 const navLinks = [
   { label: "Sobre", href: "#sobre", isHash: true },
-  { label: "Atuação", href: "#atuacao", isHash: true },
   { label: "Formação", href: "#formacao", isHash: true },
   { label: "Blog", href: "/blog", isHash: false },
   { label: "Contato", href: "#contato", isHash: true },
@@ -37,13 +36,13 @@ const Navbar = () => {
         <nav className="hidden md:flex gap-8">
           {navLinks.map((l) => (
             l.isHash ? (
-              <a
+              <RouterLink
                 key={l.href}
-                href={l.href}
+                to={`/${l.href}`}
                 className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
               >
                 {l.label}
-              </a>
+              </RouterLink>
             ) : (
               <RouterLink
                 key={l.href}
@@ -78,14 +77,14 @@ const Navbar = () => {
             <div className="flex flex-col gap-4 px-6 py-6">
               {navLinks.map((l) => (
                 l.isHash ? (
-                  <a
+                  <RouterLink
                     key={l.href}
-                    href={l.href}
+                    to={`/${l.href}`}
                     onClick={() => setMobileOpen(false)}
                     className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
                   >
                     {l.label}
-                  </a>
+                  </RouterLink>
                 ) : (
                   <RouterLink
                     key={l.href}

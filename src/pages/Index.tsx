@@ -1,9 +1,10 @@
 import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
 import AboutSection from "@/components/AboutSection";
+import LatestArticlesSection from "@/components/LatestArticlesSection";
 import ModalidadesSection from "@/components/ModalidadesSection";
-import AreasSection from "@/components/AreasSection";
 import TimelineSection from "@/components/TimelineSection";
+import FAQSection from "@/components/FAQSection";
 import ReviewsSection from "@/components/ReviewsSection";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
@@ -18,7 +19,7 @@ import { useSEO } from "@/hooks/useSEO";
 const Index = () => {
   // SEO metadata for homepage
   useSEO({
-    title: "Médico em Caruaru e Limoeiro - Clínica Geral e Medicina de Família | Dr. Edvaldo",
+    title: "Dr. Edvaldo Jerônimo | Médico em Caruaru e Limoeiro - Clínica Geral e Medicina de Família",
     description:
       "Médico de Família em Caruaru e Limoeiro. Atendimento especializado em clínica geral, medicina de família e comunitária. Consultas presenciais e teleconsultas com Dr. Edvaldo Jerônimo.",
     keywords:
@@ -103,9 +104,10 @@ const Index = () => {
       <Navbar />
       <HeroSection />
       <AboutSection />
+      <LatestArticlesSection />
       <ModalidadesSection />
-      <AreasSection />
       <TimelineSection />
+      <FAQSection />
       <ReviewsSection />
       <ContactSection />
       <Footer />
