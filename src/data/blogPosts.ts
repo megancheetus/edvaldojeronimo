@@ -13,6 +13,49 @@ export interface BlogPost {
 }
 
 export const blogPosts: BlogPost[] = [
+{
+  id: "0",
+  title: "O Que É Higiene do Sono e por que ela importa?",
+  excerpt: "Entenda como pequenos ajustes na sua rotina podem combater a insônia sem depender de remédios e saiba quando buscar ajuda médica especializada.",
+  content: `Dormir mal deixou de ser uma exceção para se tornar a regra na vida de muitos adultos. O cansaço constante, a falta de foco e a irritabilidade são apenas os sintomas mais visíveis de um problema maior: a privação crônica de sono. Antes de recorrer a medicamentos — que muitas vezes mascaram o problema sem tratar a causa —, o primeiro passo clínico e científico para combater a insônia é a **higiene do sono**.
+
+Mas o que exatamente é isso e como pequenas mudanças na rotina podem reverter noites em claro?
+
+### O que é Higiene do Sono?
+
+A higiene do sono não tem a ver com limpeza física, mas com a "limpeza" dos seus hábitos. Trata-se de um conjunto de práticas comportamentais e ambientais desenhadas para preparar o seu cérebro e o seu corpo para o descanso profundo. É o treinamento diário do seu relógio biológico para que ele entenda exatamente qual é a hora de estar alerta e qual é a hora de desligar.
+
+### Hábitos que podem estar prejudicando seu sono
+
+Se você sofre de insônia, é provável que a sua rotina noturna esteja atrapalhando o descanso do seu cérebro. Os principais sabotadores do sono incluem:
+
+* **Exposição à luz azul:** Celulares, tablets e televisões emitem uma luz que inibe a produção de melatonina (o hormônio do sono), enganando o cérebro para que ele ache que ainda é dia.
+* **Consumo de estimulantes:** Café, energéticos, chás escuros e até mesmo o chocolate consumidos no final da tarde ou à noite mantêm o sistema nervoso central em alerta.
+* **Irregularidade de horários:** Dormir e acordar em horários completamente diferentes a cada dia desregula o ciclo circadiano.
+* **Uso da cama para outras atividades:** Trabalhar, comer ou assistir a séries na cama faz com que o cérebro deixe de associar o colchão exclusivamente ao descanso.
+
+### Como transformar a qualidade do sono
+
+Mudanças comportamentais exigem disciplina, mas são a intervenção mais eficaz e duradoura para a insônia. Aplique as seguintes estratégias:
+
+1. **Crie um "ritual de desligamento":** Cerca de uma a duas horas antes de dormir, afaste-se das telas. Substitua o celular por um livro, um banho morno ou exercícios leves de respiração.
+2. **Ajuste o ambiente:** Seu quarto deve parecer uma caverna: escuro, silencioso e com temperatura amena. Invista em cortinas blecaute e, se necessário, tampões de ouvido.
+3. **Estabeleça horários fixos:** Condicione seu corpo indo para a cama e levantando nos mesmos horários todos os dias, inclusive aos finais de semana.
+4. **Cuidado com a alimentação noturna:** Evite refeições pesadas e o consumo de álcool perto da hora de dormir. O álcool pode até ajudar a apagar rápido, mas destrói a arquitetura do sono, causando despertares noturnos e cansaço no outro dia.
+
+### Quando a higiene do sono não é suficiente?
+
+A higiene do sono resolve uma grande parcela das dificuldades para dormir. No entanto, se você aplicou essas mudanças com consistência por semanas e a insônia persiste, o problema pode ter raízes neurológicas, psiquiátricas (como ansiedade e depressão) ou fisiológicas mais profundas.
+
+A automedicação com remédios para dormir é perigosa e cria dependência. Casos refratários exigem investigação e tratamento direcionado. Para uma avaliação médica individualizada e focada em resolver a raiz do problema, o **Dr. Edvaldo Jerônimo** oferece atendimento especializado. As consultas podem ser realizadas de forma **presencial em Caruaru** ou através de **teleconsulta**, garantindo acesso ao tratamento adequado onde quer que você esteja.`,
+  author: "Dr. Edvaldo Jerônimo",
+  date: "2026-04-08",
+  readTime: 2,
+  category: "Saúde Mental",
+  tags: ["Higiene do Sono", "Insônia", "Rotina", "Bem-estar"],
+  featured: false,
+  thumbnail: "https://i.ibb.co/7tZcJ9gj/Gemini-Generated-Image-dpvnuwdpvnuwdpvn.png"
+},
     {
     id: "1",
     title: "Implanon: O que é, para que serve e por que considerar esse método?",

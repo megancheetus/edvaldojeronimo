@@ -1,7 +1,24 @@
 {
-  "generated": "2026-04-01T23:11:01.989Z",
+  "generated": "2026-04-08T23:39:02.480Z",
   "baseUrl": "https://edvaldojeronimo.com.br",
   "posts": [
+    {
+      "id": "0",
+      "title": "O Que É Higiene do Sono e por que ela importa?",
+      "excerpt": "Entenda como pequenos ajustes na sua rotina podem combater a insônia sem depender de remédios e saiba quando buscar ajuda médica especializada.",
+      "author": "Dr. Edvaldo Jerônimo",
+      "date": "2026-04-08",
+      "readTime": 2,
+      "category": "Saúde Mental",
+      "tags": [
+        "Higiene do Sono",
+        "Insônia",
+        "Rotina",
+        "Bem-estar"
+      ],
+      "featured": false,
+      "thumbnail": "https://i.ibb.co/7tZcJ9gj/Gemini-Generated-Image-dpvnuwdpvnuwdpvn.png"
+    },
     {
       "id": "1",
       "title": "Implanon: O que é, para que serve e por que considerar esse método?",
