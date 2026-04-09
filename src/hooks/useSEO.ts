@@ -4,6 +4,8 @@ interface SEOMetadata {
   title: string;
   description: string;
   keywords?: string;
+  canonicalUrl?: string;
+  ogType?: string;
   ogTitle?: string;
   ogDescription?: string;
   ogImage?: string;
@@ -40,6 +42,15 @@ export const useSEO = (metadata: SEOMetadata) => {
     }
 
     // Update Open Graph tags
+    const ogTypeMeta =
+      document.querySelector('meta[property="og:type"]') ||
+      document.createElement("meta");
+    ogTypeMeta.setAttribute("property", "og:type");
+    ogTypeMeta.setAttribute("content", metadata.ogType || "website");
+    if (!document.querySelector('meta[property="og:type"]')) {
+      document.head.appendChild(ogTypeMeta);
+    }
+
     if (metadata.ogTitle) {
       const ogTitleMeta =
         document.querySelector('meta[property="og:title"]') ||
@@ -82,6 +93,18 @@ export const useSEO = (metadata: SEOMetadata) => {
       twitterDescMeta.setAttribute("content", metadata.twitterDescription);
       if (!document.querySelector('meta[name="twitter:description"]')) {
         document.head.appendChild(twitterDescMeta);
+      }
+    }
+
+    // Update canonical URL
+    if (metadata.canonicalUrl) {
+      const canonicalLink =
+        document.querySelector('link[rel="canonical"]') ||
+        document.createElement("link");
+      canonicalLink.setAttribute("rel", "canonical");
+      canonicalLink.setAttribute("href", metadata.canonicalUrl);
+      if (!document.querySelector('link[rel="canonical"]')) {
+        document.head.appendChild(canonicalLink);
       }
     }
   }, [metadata]);

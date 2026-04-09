@@ -146,6 +146,45 @@ export const createMedicalBusinessSchema = (): Record<string, any> => {
   };
 };
 
+export const createBlogPostingSchema = (post: {
+  title: string;
+  excerpt: string;
+  content: string;
+  author: string;
+  date: string;
+  thumbnail?: string;
+  tags: string[];
+  slug: string;
+}): Record<string, any> => {
+  return {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    headline: post.title,
+    description: post.excerpt,
+    image: post.thumbnail,
+    author: {
+      "@type": "Person",
+      name: post.author,
+      url: "https://edvaldojeronimo.com",
+    },
+    publisher: {
+      "@type": "Organization",
+      name: "Dr. Edvaldo Jerônimo",
+      url: "https://edvaldojeronimo.com",
+    },
+    datePublished: post.date,
+    dateModified: post.date,
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": `https://edvaldojeronimo.com/blog/${post.slug}`,
+
+    },
+    keywords: post.tags.join(", "),
+    articleBody: post.content,
+    wordCount: post.content.split(/\s+/).length,
+  };
+};
+
 export const createBreadcrumbSchema = (
   breadcrumbs: Array<{ name: string; url: string }>
 ): Record<string, any> => {

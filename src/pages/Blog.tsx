@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { blogPosts } from "@/data/blogPosts";
@@ -6,9 +6,25 @@ import Navbar from "@/components/Navbar";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
 import { Calendar, Clock, Tag } from "lucide-react";
+import { useSEO } from "@/hooks/useSEO";
 
 const Blog = () => {
   const [selectedCategory, setSelectedCategory] = useState<string>("Todos");
+
+  useSEO({
+    title: "Blog de Saúde | Dr. Edvaldo Jerônimo",
+    description:
+      "Artigos e dicas sobre medicina, saúde preventiva e bem-estar para você e sua família. Blog do Dr. Edvaldo Jerônimo, Médico de Família em Caruaru e Limoeiro.",
+    keywords:
+      "blog saúde, artigos medicina, saúde preventiva, bem-estar, médico de família, caruaru",
+    canonicalUrl: "https://edvaldojeronimo.com/blog",
+    ogTitle: "Blog de Saúde | Dr. Edvaldo Jerônimo",
+    ogDescription:
+      "Artigos e dicas sobre medicina, saúde preventiva e bem-estar para você e sua família.",
+    twitterTitle: "Blog de Saúde | Dr. Edvaldo Jerônimo",
+    twitterDescription:
+      "Artigos e dicas sobre medicina, saúde preventiva e bem-estar para você e sua família.",
+  });
 
   const categories = [
     "Todos",
@@ -23,52 +39,6 @@ const Blog = () => {
   const sortedPosts = [...filteredPosts].sort(
     (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
   );
-
-  // Update document title and meta tags when on Blog page
-  useEffect(() => {
-    const previousTitle = document.title;
-    document.title = "Dr. Edvaldo Jerônimo | Blog";
-
-    const ogTitle = document.querySelector('meta[property="og:title"]') as HTMLMetaElement | null;
-    const twitterTitle = document.querySelector('meta[name="twitter:title"]') as HTMLMetaElement | null;
-    const prevOg = ogTitle?.getAttribute("content") ?? null;
-    const prevTwitter = twitterTitle?.getAttribute("content") ?? null;
-
-    if (ogTitle) ogTitle.setAttribute("content", "Dr. Edvaldo Jerônimo | Blog");
-    if (twitterTitle) twitterTitle.setAttribute("content", "Dr. Edvaldo Jerônimo | Blog");
-
-    return () => {
-      document.title = previousTitle;
-      if (ogTitle) {
-        if (prevOg !== null) ogTitle.setAttribute("content", prevOg);
-        else ogTitle.removeAttribute("content");
-      }
-      if (twitterTitle) {
-        if (prevTwitter !== null) twitterTitle.setAttribute("content", prevTwitter);
-        else twitterTitle.removeAttribute("content");
-      }
-    };
-  }, []);
-
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1,
-        delayChildren: 0.2,
-      },
-    },
-  };
-
-  const itemVariants = {
-    hidden: { opacity: 0, x: -20 },
-    visible: {
-      opacity: 1,
-      x: 0,
-      transition: { duration: 0.5 },
-    },
-  };
 
   const formatDate = (dateString: string) => {
     const date = new Date(dateString);
@@ -145,15 +115,16 @@ const Blog = () => {
           </motion.div>
 
           {/* Timeline de Posts */}
-          <motion.div
-            variants={containerVariants}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
+          <div
+            key={selectedCategory}
             className="space-y-8">
             {sortedPosts.length > 0 ? (
               sortedPosts.map((post, index) => (
-                <motion.div key={post.id} variants={itemVariants}>
+                <motion.div
+                  key={post.id}
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}>
                   <div className="flex gap-6">
                     {/* Timeline Dot e Linha */}
                     <div className="flex flex-col items-center">
@@ -185,7 +156,7 @@ const Blog = () => {
                                   </Badge>
                                 )}
                               </div>
-                              <Link to={`/blog/${post.id}`} className="block">
+                              <Link to={`/blog/${post.slug}`} className="block">
                                 <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-2 hover:text-primary transition-colors cursor-pointer">
                                   {post.title}
                                 </h2>
@@ -232,7 +203,7 @@ const Blog = () => {
 
                           {/* Botão Ler Mais */}
                           <a
-                            href={`/blog/${post.id}`}
+                            href={`/blog/${post.slug}`}
                             className="inline-flex items-center gap-2 text-primary hover:text-primary/80 font-semibold transition-colors">
                             Ler artigo completo
                             <svg
@@ -261,7 +232,7 @@ const Blog = () => {
                 </p>
               </div>
             )}
-          </motion.div>
+          </div>
         </div>
       </div>
     </div>

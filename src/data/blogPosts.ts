@@ -1,5 +1,6 @@
 export interface BlogPost {
   id: string;
+  slug: string;
   title: string;
   excerpt: string;
   content: string;
@@ -15,6 +16,7 @@ export interface BlogPost {
 export const blogPosts: BlogPost[] = [
 {
   id: "0",
+  slug: "higiene-do-sono",
   title: "O Que É Higiene do Sono e por que ela importa?",
   excerpt: "Entenda como pequenos ajustes na sua rotina podem combater a insônia sem depender de remédios e saiba quando buscar ajuda médica especializada.",
   content: `Dormir mal deixou de ser uma exceção para se tornar a regra na vida de muitos adultos. O cansaço constante, a falta de foco e a irritabilidade são apenas os sintomas mais visíveis de um problema maior: a privação crônica de sono. Antes de recorrer a medicamentos — que muitas vezes mascaram o problema sem tratar a causa —, o primeiro passo clínico e científico para combater a insônia é a **higiene do sono**.
@@ -51,13 +53,14 @@ A automedicação com remédios para dormir é perigosa e cria dependência. Cas
   author: "Dr. Edvaldo Jerônimo",
   date: "2026-04-08",
   readTime: 2,
-  category: "Saúde Mental",
+  category: "Saúde do Sono",
   tags: ["Higiene do Sono", "Insônia", "Rotina", "Bem-estar"],
   featured: false,
   thumbnail: "https://i.ibb.co/7tZcJ9gj/Gemini-Generated-Image-dpvnuwdpvnuwdpvn.png"
 },
     {
     id: "1",
+    slug: "implanon-o-que-e-para-que-serve",
     title: "Implanon: O que é, para que serve e por que considerar esse método?",
     excerpt: "Tomar pílula todos os dias não é a única, nem a melhor forma de evitar uma gravidez para todas as mulheres. Entenda como o Implanon funciona, suas vantagens e seus reais efeitos colaterais.",
     content: `# Implanon: O que é, para que serve e por que considerar esse método?
@@ -119,6 +122,7 @@ Quer saber se o Implanon é o método ideal para você? Agende uma avaliação n
   },
   {
     id: "2",
+    slug: "alem-do-checkup-verdadeira-prevencao",
     title: "Muito além do check-up: O que é a verdadeira prevenção em saúde?",
     excerpt: "Fazer dezenas de exames sem necessidade não é prevenção. Entenda como a Medicina de Família atua para proteger você de intervenções desnecessárias.",
     content: `Existe um mito muito comum na medicina moderna: a ideia de que fazer uma bateria de exames (o famoso "check-up" completo) todo ano é sinônimo de prevenção. Na realidade, a verdadeira medicina preventiva vai muito além de buscar doenças com exames de imagem ou sangue.
@@ -144,6 +148,7 @@ Investir em saúde não é colecionar laudos normais, mas sim construir um plano
   },
   {
     id: "3",
+    slug: "perigo-medicamentos-tarja-preta-sono",
     title: "Por que você não consegue dormir? O perigo dos medicamentos \"tarja preta\" ",
     excerpt: "A insônia é um sintoma, não a doença. Descubra por que a higiene do sono é o único tratamento real e definitivo a longo prazo.",
     content: `Vivemos uma epidemia de uso de medicamentos para dormir. Fármacos como o zolpidem e os benzodiazepínicos (clonazepam, diazepam) são frequentemente prescritos como primeira linha para a insônia, mas a ciência nos mostra que essa é uma abordagem perigosa e insustentável.
@@ -169,6 +174,7 @@ Se o sono não vem, não lute na cama. Levante-se, vá para um ambiente com luz 
   },
   {
     id: "4",
+    slug: "exercicio-fisico-prescricao-medica",
     title: "Exercício físico não é sobre estética, é prescrição médica",
     excerpt: "Entenda por que a atividade física é o tratamento de primeira linha para hipertensão, diabetes e saúde mental.",
     content: `No consultório, costumo dizer aos pacientes que se os benefícios do exercício físico pudessem ser colocados em uma pílula, ela seria o medicamento mais prescrito, mais eficaz e com menos efeitos colaterais da história da medicina. 

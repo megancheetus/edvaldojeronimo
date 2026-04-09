@@ -154,7 +154,7 @@
       // Grid
       html += '<div class="ebw-grid">';
       posts.forEach(function (post) {
-        var postUrl = siteUrl + "/blog/" + encodeURIComponent(post.id);
+        var postUrl = siteUrl + "/blog/" + encodeURIComponent(post.slug || post.id);
         var excerpt = post.excerpt.length > 160 ? post.excerpt.slice(0, 160) + "..." : post.excerpt;
 
         html += '<a class="ebw-card" href="' + escapeHtml(postUrl) + '" target="_blank" rel="noopener noreferrer">';

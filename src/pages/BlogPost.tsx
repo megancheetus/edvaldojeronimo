@@ -5,11 +5,33 @@ import { blogPosts } from "@/data/blogPosts";
 import Navbar from "@/components/Navbar";
 import { Badge } from "@/components/ui/badge";
 import { Calendar, Clock, Tag, ArrowLeft } from "lucide-react";
+import { useSEO } from "@/hooks/useSEO";
+import { StructuredData, createBlogPostingSchema } from "@/components/StructuredData";
 
 const BlogPost = () => {
-  const { id } = useParams();
+  const { slug } = useParams();
   const navigate = useNavigate();
-  const post = blogPosts.find((p) => p.id === id);
+  const post = blogPosts.find((p) => p.slug === slug);
+
+  useSEO({
+    title: post
+      ? `${post.title} | Dr. Edvaldo Jerônimo`
+      : "Artigo não encontrado | Dr. Edvaldo Jerônimo",
+    description: post?.excerpt ?? "Artigo não encontrado.",
+    keywords: post?.tags.join(", "),
+    canonicalUrl: post
+      ? `https://edvaldojeronimo.com/blog/${post.slug}`
+      : undefined,
+    ogType: post ? "article" : undefined,
+    ogTitle: post?.title,
+    ogDescription: post?.excerpt,
+    ogImage: post?.thumbnail,
+    twitterTitle: post?.title,
+    twitterDescription: post?.excerpt,
+    twitterImage: post?.thumbnail,
+  });
+
+  const blogPostingSchema = post ? createBlogPostingSchema(post) : null;
 
   if (!post) {
     return (
@@ -49,6 +71,7 @@ const BlogPost = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      {blogPostingSchema && <StructuredData schema={blogPostingSchema} />}
       <Navbar />
       {/* Header */}
       <section className="pt-24 pb-12 md:pt-28 md:pb-16 bg-gradient-to-b from-primary/5 to-transparent border-b border-primary/10">

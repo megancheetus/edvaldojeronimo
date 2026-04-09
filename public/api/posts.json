@@ -1,15 +1,16 @@
 {
-  "generated": "2026-04-08T23:39:02.480Z",
+  "generated": "2026-04-09T00:01:05.260Z",
   "baseUrl": "https://edvaldojeronimo.com.br",
   "posts": [
     {
       "id": "0",
+      "slug": "higiene-do-sono",
       "title": "O Que É Higiene do Sono e por que ela importa?",
       "excerpt": "Entenda como pequenos ajustes na sua rotina podem combater a insônia sem depender de remédios e saiba quando buscar ajuda médica especializada.",
       "author": "Dr. Edvaldo Jerônimo",
       "date": "2026-04-08",
       "readTime": 2,
-      "category": "Saúde Mental",
+      "category": "Saúde do Sono",
       "tags": [
         "Higiene do Sono",
         "Insônia",
@@ -21,6 +22,7 @@
     },
     {
       "id": "1",
+      "slug": "implanon-o-que-e-para-que-serve",
       "title": "Implanon: O que é, para que serve e por que considerar esse método?",
       "excerpt": "Tomar pílula todos os dias não é a única, nem a melhor forma de evitar uma gravidez para todas as mulheres. Entenda como o Implanon funciona, suas vantagens e seus reais efeitos colaterais.",
       "author": "Dr. Edvaldo Jerônimo",
@@ -38,6 +40,7 @@
     },
     {
       "id": "2",
+      "slug": "alem-do-checkup-verdadeira-prevencao",
       "title": "Muito além do check-up: O que é a verdadeira prevenção em saúde?",
       "excerpt": "Fazer dezenas de exames sem necessidade não é prevenção. Entenda como a Medicina de Família atua para proteger você de intervenções desnecessárias.",
       "author": "Dr. Edvaldo Jerônimo",
@@ -54,6 +57,7 @@
     },
     {
       "id": "3",
+      "slug": "perigo-medicamentos-tarja-preta-sono",
       "title": "Por que você não consegue dormir? O perigo dos medicamentos \"tarja preta\" ",
       "excerpt": "A insônia é um sintoma, não a doença. Descubra por que a higiene do sono é o único tratamento real e definitivo a longo prazo.",
       "author": "Dr. Edvaldo Jerônimo",
@@ -70,6 +74,7 @@
     },
     {
       "id": "4",
+      "slug": "exercicio-fisico-prescricao-medica",
       "title": "Exercício físico não é sobre estética, é prescrição médica",
       "excerpt": "Entenda por que a atividade física é o tratamento de primeira linha para hipertensão, diabetes e saúde mental.",
       "author": "Dr. Edvaldo Jerônimo",

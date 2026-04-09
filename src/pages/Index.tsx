@@ -24,6 +24,7 @@ const Index = () => {
       "Médico de Família em Caruaru e Limoeiro. Atendimento especializado em clínica geral, medicina de família e comunitária. Consultas presenciais e teleconsultas com Dr. Edvaldo Jerônimo.",
     keywords:
       "médico caruaru, médico limoeiro, clínica geral caruaru, médico de família, medicina de família caruaru, atendimento médico caruaru, consultório médico caruaru, teleconsulta caruaru, médico em caruaru",
+    canonicalUrl: "https://edvaldojeronimo.com/",
     ogTitle:
       "Médico de Família em Caruaru e Limoeiro - Dr. Edvaldo Jerônimo",
     ogDescription:

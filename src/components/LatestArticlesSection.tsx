@@ -62,7 +62,7 @@ const LatestArticlesSection = () => {
               className="rounded-xl border border-border bg-card overflow-hidden card-elevated"
             >
               {post.thumbnail ? (
-                <Link to={`/blog/${post.id}`} className="relative block h-52 overflow-hidden">
+                <Link to={`/blog/${post.slug}`} className="relative block h-52 overflow-hidden">
                   <img
                     src={post.thumbnail}
                     alt={post.title}
@@ -82,7 +82,7 @@ const LatestArticlesSection = () => {
                   {post.category}
                 </Badge>
 
-                <Link to={`/blog/${post.id}`}>
+                <Link to={`/blog/${post.slug}`}>
                   <h3 className="text-xl font-bold text-foreground leading-tight mb-3 hover:text-primary transition-colors">
                     {post.title}
                   </h3>
@@ -101,7 +101,7 @@ const LatestArticlesSection = () => {
                 </div>
 
                 <Link
-                  to={`/blog/${post.id}`}
+                  to={`/blog/${post.slug}`}
                   className="inline-flex items-center gap-2 text-sm font-semibold text-primary hover:text-primary/80 transition-colors"
                 >
                   Saiba mais
