@@ -44,10 +44,21 @@ const Navbar = () => {
       }`}
     >
       <div className="container mx-auto flex items-center justify-between px-6 py-4">
-        <RouterLink to="/" className="flex items-center gap-3 text-2xl font-bold text-primary tracking-tight">
+        <a
+          href="/"
+          onClick={(e) => {
+            e.preventDefault();
+            if (location.pathname === "/") {
+              window.scrollTo({ top: 0, behavior: "smooth" });
+            } else {
+              navigate("/");
+            }
+          }}
+          className="flex items-center gap-3 text-2xl font-bold text-primary tracking-tight"
+        >
           <img src="/favicon.ico" alt="Favicon" className="w-8 h-8 object-contain" />
           <span>Edvaldo Jerônimo</span>
-        </RouterLink>
+        </a>
 
         {/* Desktop */}
         <nav className="hidden md:flex gap-8">
