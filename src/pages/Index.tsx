@@ -1,3 +1,5 @@
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
 import AboutSection from "@/components/AboutSection";
@@ -17,6 +19,21 @@ import {
 import { useSEO } from "@/hooks/useSEO";
 
 const Index = () => {
+  const location = useLocation();
+
+  // Scroll to section when navigating from another page
+  useEffect(() => {
+    const scrollTo = (location.state as any)?.scrollTo;
+    if (scrollTo) {
+      // Small delay to ensure DOM is ready
+      setTimeout(() => {
+        document.getElementById(scrollTo)?.scrollIntoView({ behavior: "smooth" });
+      }, 100);
+      // Clean up state so refresh doesn't re-scroll
+      window.history.replaceState({}, "");
+    }
+  }, [location.state]);
+
   // SEO metadata for homepage
   useSEO({
     title: "Dr. Edvaldo Jerônimo | Médico em Caruaru e Limoeiro - Clínica Geral e Medicina de Família",

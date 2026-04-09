@@ -1,7 +1,7 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Link as RouterLink } from "react-router-dom";
+import { Link as RouterLink, useLocation, useNavigate } from "react-router-dom";
 
 const navLinks = [
   { label: "Sobre", href: "#sobre", isHash: true },
@@ -13,12 +13,29 @@ const navLinks = [
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
+  const location = useLocation();
+  const navigate = useNavigate();
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20);
     window.addEventListener("scroll", onScroll);
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
+
+  const handleHashClick = useCallback(
+    (e: React.MouseEvent, hash: string) => {
+      e.preventDefault();
+      setMobileOpen(false);
+      const id = hash.replace("#", "");
+
+      if (location.pathname === "/") {
+        document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+      } else {
+        navigate("/", { state: { scrollTo: id } });
+      }
+    },
+    [location.pathname, navigate]
+  );
 
   return (
     <header
@@ -36,13 +53,14 @@ const Navbar = () => {
         <nav className="hidden md:flex gap-8">
           {navLinks.map((l) => (
             l.isHash ? (
-              <RouterLink
+              <a
                 key={l.href}
-                to={`/${l.href}`}
-                className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
+                href={l.href}
+                onClick={(e) => handleHashClick(e, l.href)}
+                className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors cursor-pointer"
               >
                 {l.label}
-              </RouterLink>
+              </a>
             ) : (
               <RouterLink
                 key={l.href}
@@ -77,14 +95,14 @@ const Navbar = () => {
             <div className="flex flex-col gap-4 px-6 py-6">
               {navLinks.map((l) => (
                 l.isHash ? (
-                  <RouterLink
+                  <a
                     key={l.href}
-                    to={`/${l.href}`}
-                    onClick={() => setMobileOpen(false)}
-                    className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
+                    href={l.href}
+                    onClick={(e) => handleHashClick(e, l.href)}
+                    className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors cursor-pointer"
                   >
                     {l.label}
-                  </RouterLink>
+                  </a>
                 ) : (
                   <RouterLink
                     key={l.href}
