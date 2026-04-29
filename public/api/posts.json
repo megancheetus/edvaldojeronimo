@@ -1,9 +1,27 @@
 {
-  "generated": "2026-04-09T00:08:53.926Z",
+  "generated": "2026-04-29T00:00:00.000Z",
   "baseUrl": "https://edvaldojeronimo.com.br",
   "posts": [
     {
       "id": "0",
+      "slug": "10-dicas-melhorar-sono",
+      "title": "10 Dicas para Melhorar Seu Sono: Guia Prático para Noites Tranquilas",
+      "excerpt": "Descubra as 10 estratégias comprovadas para recuperar a qualidade do seu sono e transformar suas noites. Um guia prático baseado em evidências científicas.",
+      "author": "Dr. Edvaldo Jerônimo",
+      "date": "2026-04-29",
+      "readTime": 5,
+      "category": "Saúde do Sono",
+      "tags": [
+        "Sono",
+        "Higiene do Sono",
+        "Dicas Práticas",
+        "Bem-estar"
+      ],
+      "featured": false,
+      "thumbnail": "https://images.unsplash.com/photo-1531407885569-95a2893f3e9f?w=500&h=300&fit=crop"
+    },
+    {
+      "id": "1",
       "slug": "higiene-do-sono",
       "title": "O Que É Higiene do Sono e por que ela importa?",
       "excerpt": "Entenda como pequenos ajustes na sua rotina podem combater a insônia sem depender de remédios e saiba quando buscar ajuda médica especializada.",
@@ -21,7 +39,7 @@
       "thumbnail": "https://i.ibb.co/7tZcJ9gj/Gemini-Generated-Image-dpvnuwdpvnuwdpvn.png"
     },
     {
-      "id": "1",
+      "id": "2",
       "slug": "implanon-o-que-e-para-que-serve",
       "title": "Implanon: O que é, para que serve e por que considerar esse método?",
       "excerpt": "Tomar pílula todos os dias não é a única, nem a melhor forma de evitar uma gravidez para todas as mulheres. Entenda como o Implanon funciona, suas vantagens e seus reais efeitos colaterais.",
@@ -39,7 +57,7 @@
       "thumbnail": "https://www.mdsaude.com/wp-content/uploads/implanon-hero-676x676.jpg"
     },
     {
-      "id": "2",
+      "id": "3",
       "slug": "alem-do-checkup-verdadeira-prevencao",
       "title": "Muito além do check-up: O que é a verdadeira prevenção em saúde?",
       "excerpt": "Fazer dezenas de exames sem necessidade não é prevenção. Entenda como a Medicina de Família atua para proteger você de intervenções desnecessárias.",
@@ -56,7 +74,7 @@
       "thumbnail": "https://gruposhbrasil.com.br/cache/12checkup_178986ff4359f3bc29bbb5b9f07e9355.jpg"
     },
     {
-      "id": "3",
+      "id": "4",
       "slug": "perigo-medicamentos-tarja-preta-sono",
       "title": "Por que você não consegue dormir? O perigo dos medicamentos \"tarja preta\" ",
       "excerpt": "A insônia é um sintoma, não a doença. Descubra por que a higiene do sono é o único tratamento real e definitivo a longo prazo.",
@@ -73,7 +91,7 @@
       "thumbnail": "https://netsonoblog.com.br/wp-content/uploads/2024/06/insonia.png"
     },
     {
-      "id": "4",
+      "id": "5",
       "slug": "exercicio-fisico-prescricao-medica",
       "title": "Exercício físico não é sobre estética, é prescrição médica",
       "excerpt": "Entenda por que a atividade física é o tratamento de primeira linha para hipertensão, diabetes e saúde mental.",
